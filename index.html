@@ -14,7 +14,7 @@
 <!--Felix!-->
 
   <!--Stylesheets-->
-  <link href="http://www.osephj.com/rl_dev/css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 
   <!--jQuery-->
   <script src="http://code.jquery.com/jquery-latest.min.js"
@@ -27,58 +27,6 @@
 <a class="header-logo"></a>
 <nav class="header-nav"></nav>
 </header>
-
-<section class="posts">
-{block:Posts}
-
-{block:Text}
-<article class="post text-post">
-	<div class="text-content">
-		{block:Title}
-			<h3><a href="{Permalink}">{Title}</a></h3>
-		{/block:Title}
-	
-		{Body}
-	</div>
-	<div class="post-footer">
-	{block:Date}<span class="date">{DayOfMonth} {ShortMonth} {Year}</span>{/block:Date}
-	{block:HasTags}<span class="tags">{block:Tags}<a href="{TagURLChrono}">#{Tag}</a>{/block:Tags}</span>{/block:HasTags}
-	<span class="notes">{NoteCountWithLabel}</span>
-	</div>
-</article>
-{/block:Text}
-
-{block:Photo}
-<article class="post photo-post">
-
-	<div class="photo-container">
-		<img class="photo-img" src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
-		{block:Exif}
-			<aside class="photo-camera-info">
-				<p>
-					{block:Camera}{Camera}{/block:Camera}{block:Aperture}&nbsp;/&nbsp;{Aperture}{/block:Aperture}{block:Exposure}&nbsp;/&nbsp{Exposure}{/block:Exposure}{block:FocalLength}&nbsp;/&nbsp{FocalLength}{/block:FocalLength}{block:ISO}&nbsp;/&nbsp;ISO{ISO}{/block:ISO}
-				</p>
-			</aside>
-		{/block:Exif}
-	</div> 
-	<div class="text-content">
-	{block:Caption}
-		{Caption}
-	{/block:Caption}
-<div class="post-footer">
-{block:Date}<span class="date">{DayOfMonth} {ShortMonth} {Year}</span>{/block:Date}
-{block:HasTags}<span class="tags">{block:Tags}<a href="{TagURLChrono}">#{Tag}</a>{/block:Tags}</span>{/block:HasTags}
-<span class="notes">{NoteCountWithLabel}</span>
-</div>
-</div>
-</article>
-{/block:Photo}
-
-
-
-
-{/block:Posts}
-</section>
 
 
 </body>
